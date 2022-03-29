@@ -294,6 +294,10 @@ class OtpFieldController {
     }
   }
 
+  String getOtp() {
+    return _otpTextFieldState._getCurrentPin();
+  }
+
   void setValue(String value, int position) {
     final maxIndex = _otpTextFieldState.widget.length - 1;
     if (position > maxIndex) {
